@@ -1,0 +1,53 @@
+get http://localhost:3002/product
+
+
+###
+post http://localhost:3002/image/
+Content-Type: application/json
+
+{
+    "variant_id":2,
+    "url":"www.youtube.com"
+}
+
+### post product
+post http://localhost:3002/product
+Content-Type: application/json
+{
+    "name":"chan",
+    "description":"chan 2",
+    "price":2000,
+    "category_id":4
+}
+
+### create category
+post http://localhost:3002/category
+Content-Type:  application/json
+
+{
+    "name":"jacket 2",
+    "parent_id":1
+}
+
+### get main category
+get http://localhost:3002/category
+
+
+### get sub category
+get http://localhost:3002/category/1
+
+### get specific product based on category
+get http://localhost:3002/product/category/4
+
+### get specific product
+get http://localhost:3002/product/specific/1
+
+
+
+# ### login
+# post http://localhost:3002/user/register
+# Content-Type:  application/json
+# {
+#     "username":"cuong",
+#     "password":"haivlk123"
+# }
