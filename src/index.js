@@ -11,7 +11,11 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("success");
 });
-route(app);
+app.get("/test", (req, res) => {
+  res.send("success!!");
+});
+route(app)
+
 app.listen(port, () => {
   console.log(`listen in ${port}`);
 });
